@@ -1,0 +1,19 @@
+<h1><%= l(:label_figma_interface) %></h1>
+<div>
+  <%= form_with(url: create_figma_module_path, local: true) do |f| %>
+    <div>
+      <%= f.label :name, l(:label_module_name) %>
+      <%= f.text_field :name %>
+    </div>
+    <%= f.submit l(:label_create_module) %>
+  <% end %>
+</div>
+
+<div>
+  <h3><%= l(:label_existing_modules) %></h3>
+  <ul>
+    <% @modules.each do |mod| %>
+      <li><%= link_to mod.name, figma_interface_show_path(mod) %></li>
+    <% end %>
+  </ul>
+</div>

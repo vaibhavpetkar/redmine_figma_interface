@@ -1,0 +1,93 @@
+#form-builder {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#form-elements, #drop-zone {
+  width: 45%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-height: 400px;
+}
+
+.form-element {
+  margin: 5px 0;
+  padding: 5px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.form-element .handle {
+  cursor: grab;
+  margin-right: 10px;
+}
+
+.dropped-element {
+  border: 1px solid #007bff;
+  background-color: #e9f7ff;
+  margin: 5px 0;
+  padding: 10px;
+}
+
+.switch {
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+  position: relative;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+
+
+
+
+.component-options {
+  margin-top: 5px;
+}
+
+.remove-element {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.component-options .color-picker {
+  width: 50px;
+}

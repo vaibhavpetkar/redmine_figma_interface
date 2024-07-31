@@ -1,0 +1,63 @@
+<h1><%= l(:label_form_builder) %></h1>
+<div id="form-builder">
+  <div id="form-elements">
+    <h3><%= l(:label_form_elements) %></h3>
+    <div class="form-element" data-type="text-field">
+      <span class="handle">☰</span> <%= l(:label_text_field) %>
+    </div>
+    <div class="form-element" data-type="textarea">
+      <span class="handle">☰</span> <%= l(:label_textarea) %>
+    </div>
+    <div class="form-element" data-type="checkbox">
+      <span class="handle">☰</span> <%= l(:label_checkbox) %>
+    </div>
+    <div class="form-element" data-type="radio-button">
+      <span class="handle">☰</span> <%= l(:label_radio_button) %>
+    </div>
+    <div class="form-element" data-type="dropdown">
+      <span class="handle">☰</span> <%= l(:label_dropdown) %>
+    </div>
+    <div class="form-element" data-type="button">
+      <span class="handle">☰</span> <%= l(:label_button) %>
+    </div>
+    <div class="form-element" data-type="date-picker">
+      <span class="handle">☰</span> <%= l(:label_date_picker) %>
+    </div>
+    <div class="form-element" data-type="file-upload">
+      <span class="handle">☰</span> <%= l(:label_file_upload) %>
+    </div>
+    <div class="form-element" data-type="slider">
+      <span class="handle">☰</span> <%= l(:label_slider) %>
+    </div>
+    <div class="form-element" data-type="switch">
+      <span class="handle">☰</span> <%= l(:label_switch) %>
+    </div>
+    <div class="form-element" data-type="color-picker">
+      <span class="handle">☰</span> <%= l(:label_color_picker) %>
+    </div>
+    <div class="form-element" data-type="range-input">
+      <span class="handle">☰</span> <%= l(:label_range_input) %>
+    </div>
+    <div class="form-element" data-type="password-field">
+      <span class="handle">☰</span> <%= l(:label_password_field) %>
+    </div>
+    <div class="form-element" data-type="number-input">
+      <span class="handle">☰</span> <%= l(:label_number_input) %>
+    </div>
+    <div class="form-element" data-type="label">
+      <span class="handle">☰</span> <%= l(:label_label_text_block) %>
+    </div>
+    <div class="form-element" data-type="image">
+      <span class="handle">☰</span> <%= l(:label_image) %>
+    </div>
+  </div>
+
+  <div id="drop-zone">
+    <h3><%= l(:label_design_area) %></h3>
+  </div>
+
+  <%= form_with(url: add_figma_form_path(@sub_module), local: true, id: "form-save") do |f| %>
+    <%= f.hidden_field :form_structure, id: "form-structure" %>
+    <%= f.submit l(:label_save_form) %>
+  <% end %>
+</div>

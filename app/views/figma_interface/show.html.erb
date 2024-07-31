@@ -1,0 +1,24 @@
+<h1><%= @module.name %></h1>
+
+<div>
+  <%= form_with(url: create_figma_sub_module_path(@module), local: true) do |f| %>
+    <div>
+      <%= f.label :name, "Sub Module Name" %>
+      <%= f.text_field :name %>
+    </div>
+    <%= f.submit "Create Sub Module" %>
+  <% end %>
+</div>
+
+<div>
+  <h3>Existing Sub Modules</h3>
+  <ul>
+    <% @sub_modules.each do |sub| %>
+      <li><%= sub.name %></li>
+    <% end %>
+  </ul>
+</div>
+
+<div>
+  <%= link_to 'Add Form', new_form_path %>
+</div>
